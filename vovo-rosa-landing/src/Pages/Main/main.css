@@ -1,0 +1,8 @@
+#mainPageRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3eeda;
+  width: 100vw;
+}

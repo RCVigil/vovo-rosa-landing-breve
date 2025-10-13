@@ -1,0 +1,78 @@
+#aboutUsLeft {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 50% 20%;
+  grid-template-areas: "Ab_Us_Header" "Ab_Us_Main" "Ab_Us_Footer";
+}
+
+#header__AboutUs__Logo {
+  grid-area: Ab_Us_Header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#main__AboutUs__Description {
+  grid-area: Ab_Us_Main;
+  height: 100%;
+  margin: 2rem;
+  h6 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+  }
+  .lista-paes li {
+      position: relative;
+      padding-left: 1rem;
+      color: #555;
+      /* espaço pra seta */
+      margin-bottom: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+  .lista-paes li::before {
+    content: "→";
+    /* seta */
+    position: absolute;
+    left: 0;
+    color: #555;
+    font-weight: 400;
+  }
+}
+
+#footer__AboutUs__SocialRedes {
+  grid-area: Ab_Us_Footer;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "Ab__Rd__Inst Ab__Rd__Wt";
+  height: 100%;
+  .footer__About__Insta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+      p {
+          margin-top: 0.5rem;
+          font-size: 1rem;
+          color: #555;
+        }
+  }
+
+  .footer__About__Whats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+      color: #555;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-top: 0.4rem;
+    }
+  }
+}
