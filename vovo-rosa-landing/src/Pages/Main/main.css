@@ -6,3 +6,11 @@
   background-color: #f3eeda;
   width: 100vw;
 }
+
+/* 🔽 Responsivo para celulares */
+@media (max-width: 768px) {
+  #mainPageRight {
+    height: 30vh;
+    background-color: transparent !important;
+  }
+}

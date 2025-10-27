@@ -144,6 +144,7 @@ table {
   height: 100vh;
 }
 
+/* Layout padrão: lado a lado (desktop) */
 .divAboutUs {
   display: flex;
   justify-content: center;
@@ -156,4 +157,23 @@ table {
   justify-content: center;
   align-items: center;
   grid-area: Ma_In;
+}
+
+/* 🔽 Responsivo para celulares */
+@media (max-width: 768px) {
+  #vovoRosaDivMain {
+    border: 1px solid red;
+    grid-template-rows: 30% 70%;
+    grid-template-areas:
+    "Ma_In"
+    "Ab_Us";
+    height: 100vh;
+    width: 100vw;
+    /* deixa fluir verticalmente */
+  }
+
+  .divAboutUs,
+  .divMain {
+    width: 100vw;
+  }
 }

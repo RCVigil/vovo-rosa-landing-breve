@@ -1,3 +1,20 @@
+/* 🔽 Responsivo para celulares */
+@media (max-width: 768px) {
+  #aboutUsLeft {
+    border: 1px solid red;
+    background: #f9f9f9;
+    /* height: 70vh !important; */
+  }
+  #main__AboutUs__Description {
+    margin: 0.5rem !important;
+    height: auto;
+  }
+
+  #footer__AboutUs__SocialRedes {
+    padding-top: 5rem;
+  }
+}
+
 #aboutUsLeft {
   height: 100vh;
   width: 100vw;

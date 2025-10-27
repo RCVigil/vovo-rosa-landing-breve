@@ -1,31 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LogoVovoRosa from "../../assets/VovóRosaLogoFTransparente_semTelefone.svg";
-
 import InstagramLogo from "../../assets/InstagramLogo.svg";
-
 import whatsLogo from "../../assets/icons8-whatsapp-480.svg";
-
 import "./aboutUs.css";
 
 const AboutUs = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => setIsMobile(window.innerWidth <= 768);
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const paes = [
-    "Dueto de chocolate com doce de leite",
-    "Dueto de goiabada com cream cheese",
-    "Fatia húngara",
-    "Babka Café Noir com Chocolate",
-    "Banana Bread",
+    "Dueto de chocolate com doce de leite.",
+    "Dueto de goiabada com cream cheese.",
+    "Fatia húngara.",
+    "Babka Café Noir com Chocolate.",
+    "Banana Bread.",
+    "Amanteigado tradicional.",
+    "Amanteigado de Limão Siciliano.",
+    "Amanteigado de Chocolate.",
+    "Suspiro Tradicional.",
+    "Suspiro de limão",
   ];
 
   return (
     <div id="aboutUsLeft">
-      <div id="header__AboutUs__Logo">
-        <img
-          src={LogoVovoRosa}
-          alt="Logo Padrão Vovó Rosa Pães Artesanais"
-          width="250rem"
-          height="auto"
-        />
-      </div>
+      {/* Só mostra o logo se NÃO for celular */}
+      {!isMobile && (
+        <div id="header__AboutUs__Logo">
+          <img
+            src={LogoVovoRosa}
+            alt="Logo Padrão Vovó Rosa Pães Artesanais"
+            width="250rem"
+            height="auto"
+          />
+        </div>
+      )}
+
       <div id="main__AboutUs__Description">
         <h6>Estamos assando nosso site — quase saindo do forno! 🍞✨</h6>
         <h6>
@@ -38,6 +53,7 @@ const AboutUs = () => {
           ))}
         </ul>
       </div>
+
       <div id="footer__AboutUs__SocialRedes">
         <a
           href="https://www.instagram.com/vovorosapaesartesanais"
@@ -51,9 +67,7 @@ const AboutUs = () => {
             width="50rem"
             height="auto"
           />
-          <p>
-            Siga-nos no Instagram
-          </p>
+          <p>Siga-nos no Instagram</p>
         </a>
 
         <div className="footer__About__Whats">
@@ -64,7 +78,6 @@ const AboutUs = () => {
             height="auto"
           />
           <p>+55 12 99605-5505</p>
-
         </div>
       </div>
     </div>
