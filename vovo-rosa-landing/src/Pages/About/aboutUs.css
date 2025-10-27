@@ -1,7 +1,7 @@
 /* 🔽 Responsivo para celulares */
 @media (max-width: 768px) {
   #aboutUsLeft {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background: #f9f9f9;
     /* height: 70vh !important; */
   }
