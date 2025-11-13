@@ -80,17 +80,4 @@
           color: #555;
         }
   }
-
-  .footer__About__Whats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    p {
-      color: #555;
-      font-weight: 500;
-      font-size: 1rem;
-      margin-top: 0.4rem;
-    }
-  }
 }

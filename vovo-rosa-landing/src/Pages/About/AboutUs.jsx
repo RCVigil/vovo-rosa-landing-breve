@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LogoVovoRosa from "../../assets/VovóRosaLogoFTransparente_semTelefone.svg";
 import InstagramLogo from "../../assets/InstagramLogo.svg";
-import whatsLogo from "../../assets/icons8-whatsapp-480.svg";
+import WhatsApp from "../WhatsApp/WhatsApp.jsx";
 import "./aboutUs.css";
 
 const AboutUs = () => {
@@ -71,13 +71,14 @@ const AboutUs = () => {
         </a>
 
         <div className="footer__About__Whats">
-          <img
+          {/* <img
             src={whatsLogo}
             alt="Ícone do WhatsApp"
             width="60rem"
             height="auto"
           />
-          <p>+55 12 99605-5505</p>
+          <p>+55 12 99605-5505</p> */}
+          < WhatsApp />
         </div>
       </div>
     </div>
